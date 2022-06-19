@@ -55,8 +55,8 @@ public class Factura {
         return fechaEnvio;
     }
 
-    public String[] getCodFacturas() {
-        return codFacturas;
+    public String getCodFacturas() {
+        return Arrays.toString(codFacturas);
     }
 
     public double getImporteSinIva() {

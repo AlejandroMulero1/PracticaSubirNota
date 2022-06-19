@@ -15,6 +15,9 @@ public class Main {
         String usuario="";
         String clave="";
 
+        /**
+         * Try Catch que almacena los datos de datos.properties el cual almacena los datos de la conexion
+         */
         try {
             p.load(new FileReader("PracticaSubirNota/JAVA/src/datos.properties"));
             jdbc=p.getProperty("jdbc");
@@ -28,6 +31,6 @@ public class Main {
         List<Factura> listaFactura;
         listaFactura=Utilidades.generarLista(conectarBD(jdbc, usuario, clave));
         Utilidades.insertarLista(conectarBD(jdbc, usuario, clave), listaFactura);
-        Utilidades.insertarEnTablaFinal(conectarBD(jdbc, usuario, clave));
+        Utilidades.insertarEnTablaFinal(conectarBD(jdbc, usuario, clave), listaFactura);
     }
 }

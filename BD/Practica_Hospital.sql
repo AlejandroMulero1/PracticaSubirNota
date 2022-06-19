@@ -66,7 +66,6 @@ BEGIN
 END
 GO
 
-SELECT * FROM DevolverTodo()
 
 INSERT INTO Empresa
 VALUES
@@ -92,13 +91,6 @@ VALUES
 ('20220501', 'FC1NOVA0510',	4284.41,	8555.98)
 
 
-select * from Facturas
-GO
-
-
-CREATE PROCEDURE CrearFacturaFinal 
-AS BEGIN
-	DROP TABLE IF EXISTs dbo.FacturaFinal
 
 	CREATE TABLE FacturaFinal(
 	CIF char(9),
@@ -110,7 +102,3 @@ AS BEGIN
 		importeConIva money,
 		bonificacion money
 	);
-
-	END
-
-	EXEC CrearFacturaFinal
