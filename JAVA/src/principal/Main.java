@@ -19,7 +19,7 @@ public class Main {
          * Try Catch que almacena los datos de datos.properties el cual almacena los datos de la conexion
          */
         try {
-            p.load(new FileReader("PracticaSubirNota/JAVA/src/datos.properties"));
+            p.load(new FileReader("datos.properties"));
             jdbc=p.getProperty("jdbc");
             usuario=p.getProperty("USUARIO");
             clave=p.getProperty("CLAVE");
